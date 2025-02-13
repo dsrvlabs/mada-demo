@@ -1,0 +1,11 @@
+{
+  "*.ts?(x)": ["prettier --write", "eslint --fix"],
+  "libs/graphql/client/src/lib/requests/!(__generated__)/**/*.ts?(x)": [
+    "yarn codegen:graphql",
+    "git add libs/graphql/client/src/lib/requests/__generated__"
+  ],
+  "libs/model/src/lib/**/*.ts?(x)": [
+    "yarn codegen:graphql",
+    "git add libs/graphql/client/src/lib/requests/__generated__"
+  ]
+}

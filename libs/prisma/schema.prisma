@@ -1,0 +1,20 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("PRISMA_DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+    output   = "./generated/client"
+}
+
+model User {
+    /// 아이디
+    id        String   @id @default(cuid())
+    /// 지갑 주소
+    address   String   @unique @db.VarChar(42)
+    /// 생성 일시
+    createdAt DateTime @default(now()) @db.Timestamp(3)
+    /// 수정 일시
+    updatedAt DateTime @updatedAt @db.Timestamp(3)
+}

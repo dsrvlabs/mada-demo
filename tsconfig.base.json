@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "allowJs": true,
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@bv/graphql": ["libs/graphql/client/src/index.ts"],
+      "@bv/hooks": ["libs/hooks/src/index.ts"],
+      "@bv/model": ["libs/model/src/index.ts"],
+      "@bv/ui": ["libs/ui/src/index.ts"],
+      "@bv/utils": ["libs/utils/src/index.ts"],
+      "~/prisma/*": ["libs/prisma/*"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "dist", ".next"]
+}
