@@ -6,7 +6,7 @@ export class RequestService {
 
   create(createRequestDto: CreateRequestDto) {
     this.latestRequest = createRequestDto;
-    return { apiUrl: `https://payments2024.duckdns.org/api/request/recent` };
+    return { apiUrl: `http://locallhost:4200/api/request/recent` };
   }
 
   findLatest() {
